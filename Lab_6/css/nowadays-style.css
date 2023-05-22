@@ -1,0 +1,34 @@
+
+
+h1{
+    text-align: center;
+    font-size: 22px;
+}
+#back{
+    font-style: italic;
+}
+h2{
+    text-align: center;
+}
+
+.row{
+    display: grid;
+}
+
+ul ul li:nth-child(odd){
+    background-color: gray;
+    
+}
+
+.hover-link:hover{
+    cursor: pointer;  
+}
+ol > li:nth-child(1) > ol > li:nth-child(3) {
+    background-color: gold;
+}
+
+@media (min-width: 993px) {
+    .row{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
