@@ -1,0 +1,33 @@
+{
+  "catalog_items": [
+  {
+    "id": 1,
+    "name": "Item-1",
+    "shortname": "C-1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, sint.",
+    "price": 40
+  },
+  {
+    "id": 2,
+    "name": "Item-2",
+    "shortname": "C-2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, ratione?",
+    "price": 30
+  },
+  {
+    "id": 3,
+    "name": "Item-3",
+    "shortname": "C-3",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, praesentium.",
+    "price": 20
+  },
+  {
+    "id": 4,
+    "name": "Item-4",
+    "shortname": "C-4",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, totam.",
+    "price": 50
+  }
+],
+  "category": {"shortname": "C", "name": "Category-C", "notes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, praesentium."}
+}
