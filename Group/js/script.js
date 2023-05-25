@@ -115,7 +115,60 @@
             buildAndShowCatalogItemsHTML);
     };
 
-    
+    function buildAndShowCatalogItemsHTML(categoryCatalogItems) {
+        $ajaxUtils.sendGetRequest(
+            CATALOG_ITEMS_TITLE_HTML,
+            function (catalogItemsTitleHtml) {
+                $ajaxUtils.sendGetRequest(
+                    CATALOG_ITEM_PREVIEW_HTML,
+                    function (catalogItemPreviewHtml) {
+                        let catalogItemsViewHtml = buildCatalogItemsViewHtml(
+                            categoryCatalogItems,
+                            catalogItemsTitleHtml,
+                            catalogItemPreviewHtml);
+                        insertHtml("#content", catalogItemsViewHtml);
+                    },
+                    false);
+            },
+            false);
+    }
+
+    function buildCatalogItemsViewHtml(categoryCatalogItems, catalogItemsTitleHtml, catalogItemPreviewHtml) {
+        catalogItemsTitleHtml = insertProperty(catalogItemsTitleHtml, "name", categoryCatalogItems.category.name);
+        catalogItemsTitleHtml = insertProperty(catalogItemsTitleHtml, "notes", categoryCatalogItems.category.notes);
+
+        let finalHtml = catalogItemsTitleHtml;
+        finalHtml += "<div class='container'>";
+        finalHtml += "<section class='row'>";
+
+        let catalogItems = categoryCatalogItems.catalog_items;
+        let categoryShortName = categoryCatalogItems.category.short_name;
+
+        for (let i = 0; i < catalogItems.length; i++) {
+            let html = catalogItemPreviewHtml;
+            html = insertProperty(html, "short_name", catalogItems[i].short_name);
+            html = insertProperty(html, "name", catalogItems[i].name);
+            html = insertProperty(html, "id", catalogItems[i].id);
+            html = insertProperty(html, "rating", catalogItems[i].rating);
+            html = insertProperty(html, "categoryShortName", categoryShortName);
+            finalHtml += html;
+        }
+
+        finalHtml += "</section>";
+        finalHtml += "</div>";
+        return finalHtml;
+    }
+
+    ns.loadAboutUsPage = function () {
+        showLoading("#content");
+        $ajaxUtils.sendGetRequest(
+            ABOUT_US_HTML,
+            function (aboutUsHtml) {
+                switchAboutUsToActive();
+                insertHtml("#content", aboutUsHtml);
+            },
+            false);
+    }
 
 
     global.$ns = ns;
