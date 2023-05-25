@@ -1,0 +1,125 @@
+(function (global) {
+
+    let ns = {};
+
+    const ALL_CATEGORIES_URL = "data/categories.json";
+    const CATALOG_ITEMS_URL = "data/catalog/";
+
+    const HOME_STATIC_CONTENT_HTML = "snippets/home-snippet.html";
+    const CATEGORIES_TITLE_HTML = "snippets/categories-title-snippet.html";
+    const CATEGORY_HTML = "snippets/category-snippet.html";
+
+    const CATALOG_ITEMS_TITLE_HTML = "snippets/catalog-items-title-snippet.html";
+    const CATALOG_ITEM_PREVIEW_HTML = "snippets/catalog-item-preview-snippet.html";
+    const ABOUT_US_HTML = "snippets/about_us-snippet.html";
+
+    let insertHtml = function (selector, html) {
+        let targetElem = document.querySelector(selector);
+        targetElem.innerHTML = html;
+    };
+
+    let showLoading = function (selector) {
+        let html = "<div class='text-center'>";
+        html += "<img src='images/ajax-loader.gif' alt='loading' /></div>";
+        insertHtml(selector, html);
+    };
+
+    let insertProperty = function (string, propName, propValue) {
+        let propToReplace = "{{" + propName + "}}";
+        string = string.replace(new RegExp(propToReplace, "g"), propValue);
+        return string;
+    };
+
+    let switchCatalogToActive = function (selectedItem) {
+        removeAllActiveSelectors();
+
+        let classes = document.querySelector("#navbarDropdown").className;
+        classes += " active";
+        document.querySelector("#navbarDropdown").className = classes;
+
+        classes = document.querySelector("#nav" + selectedItem).className;
+        classes += " active";
+        document.querySelector("#nav" + selectedItem).className = classes;
+    };
+
+    let switchAboutUsToActive = function () {
+        removeAllActiveSelectors();
+
+        let classes = document.querySelector("#navAboutUsButton").className;
+        classes += " active";
+        document.querySelector("#navAboutUsButton").className = classes;
+    };
+
+    let removeAllActiveSelectors = function() {
+        document.querySelectorAll(".active").forEach(function (item) {
+            item.className = item.className.replace(new RegExp("active", "g"), "");
+        });
+    };
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        showLoading("#content");
+        $ajaxUtils
+            .sendGetRequest(
+                ALL_CATEGORIES_URL,
+                function (categories) {
+                    $ajaxUtils.sendGetRequest(
+                        HOME_STATIC_CONTENT_HTML,
+                        function (homeStaticHtml) {
+                            $ajaxUtils.sendGetRequest(
+                                CATEGORIES_TITLE_HTML,
+                                function (categoriesTitleHtml) {
+                                    $ajaxUtils.sendGetRequest(
+                                        CATEGORY_HTML,
+                                        function (categoriesHtml) {
+                                            let homeHtmlView =
+                                                buildHomeViewHtml(
+                                                    categories,
+                                                    homeStaticHtml,
+                                                    categoriesTitleHtml,
+                                                    categoriesHtml
+                                                );
+                                            insertHtml("#content", homeHtmlView);
+                                        },
+                                        false);
+                                },
+                                false);
+                        },
+                        false);
+                });
+
+    });
+
+    function buildHomeViewHtml(categories, homeStaticContent, categoriesTitleHtml, categoryHtml) {
+        let finalHtml = homeStaticContent;
+        finalHtml += categoriesTitleHtml;
+        finalHtml += "<div class='container'>";
+        finalHtml += "<section class='row'>";
+
+        for (let i = 0; i < categories.length; i++) {
+            let html = categoryHtml;
+            let name = "" + categories[i].name;
+            html = insertProperty(html, "name", name);
+            finalHtml += html;
+        }
+
+        finalHtml += "</section>";
+        finalHtml += "</div>";
+        return finalHtml;
+    }
+
+    ns.loadCategoryItems = function (categoryName) {
+        showLoading("#content");
+        switchCatalogToActive(categoryName);
+        $ajaxUtils.sendGetRequest(
+            CATALOG_ITEMS_URL + categoryName + ".json",
+            buildAndShowCatalogItemsHTML);
+    };
+
+    
+
+
+    global.$ns = ns;
+
+
+
+})(window);
