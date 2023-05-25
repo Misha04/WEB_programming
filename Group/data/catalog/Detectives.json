@@ -1,0 +1,33 @@
+{
+    "catalog_items": [
+      {
+        "id": 1,
+        "name": "Detective 1",
+        "short_name": "Detective-1",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, sint.",
+        "rating": 6.0
+      },
+      {
+        "id": 2,
+        "name": "Detective 2",
+        "short_name": "Detective-2",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, ratione?",
+        "rating": 8.6
+      },
+      {
+        "id": 3,
+        "name": "Detective 3",
+        "short_name": "Detective-3",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, praesentium.",
+        "rating": 7.2
+      },
+      {
+        "id": 4,
+        "name": "Detective 4",
+        "short_name": "Detective-4",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, totam.",
+        "rating": 4.3
+      }
+    ],
+    "category": {"short_name": "Detectives", "name": "Detectives", "notes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, sint."}
+  }

@@ -1,0 +1,33 @@
+{
+    "catalog_items": [
+      {
+        "id": 1,
+        "name": "Fantasy 1",
+        "short_name": "Fantasy-1",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, sint.",
+        "rating": 6.0
+      },
+      {
+        "id": 2,
+        "name": "Fantasy 2",
+        "short_name": "Fantasy-2",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, ratione?",
+        "rating": 8.6
+      },
+      {
+        "id": 3,
+        "name": "Fantasy 3",
+        "short_name": "Fantasy-3",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, praesentium.",
+        "rating": 7.2
+      },
+      {
+        "id": 4,
+        "name": "Fantasy 4",
+        "short_name": "Fantasy-4",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, totam.",
+        "rating": 4.3
+      }
+    ],
+    "category": {"short_name": "Fantasy", "name": "Fantasy", "notes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, sint."}
+  }

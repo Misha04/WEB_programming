@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "name": "Horrors",
+      "notes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, sint.",
+      "url": "data/catalog/Horrors.json"
+    },
+    {
+      "id": 2,
+      "name": "Actions",
+      "notes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, ratione?",
+      "url": "data/catalog/Actions.json"
+    },
+    {
+      "id": 3,
+      "name": "Comedies",
+      "notes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, praesentium.",
+      "url": "data/catalog/Comedies.json"
+    },
+    {
+      "id": 4,
+      "name": "Fantasy",
+      "notes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, totam.",
+      "url": "data/catalog/Fantasy.json"
+    },
+    {
+      "id": 5,
+      "name": "Detectives",
+      "notes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, totam.",
+      "url": "data/catalog/Detectives.json"
+    }
+  ]
