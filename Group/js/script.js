@@ -150,6 +150,7 @@
             html = insertProperty(html, "name", catalogItems[i].name);
             html = insertProperty(html, "id", catalogItems[i].id);
             html = insertProperty(html, "rating", catalogItems[i].rating);
+            html = insertProperty(html, "description", catalogItems[i].description);
             html = insertProperty(html, "categoryShortName", categoryShortName);
             finalHtml += html;
         }
