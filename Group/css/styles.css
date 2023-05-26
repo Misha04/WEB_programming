@@ -8,7 +8,7 @@ body {
   }
   
   nav .navbar-light .yellow {
-    color: #ffd700;
+    color: #ff9900;
   }
   
   nav.navbar-light li a {
@@ -25,16 +25,16 @@ body {
   }
   
   .navbar-nav > li > .dropdown-menu a:hover {
-    background-color: #ffd700;
+    background-color: #ff9900;
     color: #000000;
   }
   
   nav .navbar-nav li a:hover {
-    background-color: #ffd700;
+    background-color: #ff9900;
   }
   
   #collapsable-nav .navbar-nav li a.show {
-    background-color: #ffd700;
+    background-color: #ff9900;
     color: #000000;
   }
   
@@ -43,7 +43,7 @@ body {
   }
   
   .custom-toggler.navbar-toggler {
-    border-color: #ffd700;
+    border-color: #ff9900;
   }
   
   .custom-toggler.navbar-toggler:focus {
@@ -51,12 +51,12 @@ body {
   }
   
   #collapsable-nav .active {
-    background-color: #ffd700;
+    background-color: #ff9900;
     color: #000000;
   }
   
   .accent-color {
-    color: #ffd700;
+    color: #ff9900;
   }
   
   
@@ -66,7 +66,7 @@ body {
     .bi-emoji-smile.custom-emoji-smile,
     .bi-chat-square-text.custom-chat-square {
       font-size: 60px;
-      color: #ffd700;
+      color: #ff9900;
     }
   }
   
@@ -76,7 +76,7 @@ body {
     .bi-emoji-smile.custom-emoji-smile,
     .bi-chat-square-text.custom-chat-square {
       font-size: 6.5vw;
-      color: #ffd700;
+      color: #ff9900;
     }
   }
   
@@ -85,11 +85,13 @@ body {
     .bi-emoji-smile.custom-emoji-smile,
     .bi-chat-square-text.custom-chat-square {
       font-size: 6.25vw;
-      color: #ffd700;
+      color: #ff9900;
     }
   }
   
   /* START HOME PAGE, MAIN CONTENT */
+  
+ 
   
   .card {
     border-radius: 8px;
@@ -103,7 +105,7 @@ body {
   }
   
   .btn.custom-button {
-    background-color: #ffd700;
+    background-color: #ff9900;
     color: #333333;
     width: 100%;
   }
@@ -116,12 +118,12 @@ body {
   .bi-github.custom-github,
   .bi-linkedin.custom-linkedin {
     font-size: 40px;
-    color: #ffd700;
+    color: #ff9900;
   }
   
   .custom-h1 {
     font-size: 50px;
-    color: #524500;
+    color: #333333;
   }
   
   /* END ABOUT US PAGE */
@@ -133,17 +135,17 @@ body {
   }
   
   footer a {
-    color: #ffd700;
+    color: #ff9900;
     text-decoration: none;
   }
   
   footer a:hover {
-    background-color: #ffd700;
+    background-color: #ff9900;
     color: #000000;
     text-decoration: none;
   }
   
   .about-us:hover {
-    background-color: #ffd700;
+    background-color: #ff9900;
     color: #000000;
   }
