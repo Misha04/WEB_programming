@@ -170,11 +170,18 @@
             },
             false);
     }
-    ns.sayHello=function() {
-        var name = document.getElementById("nameInput").value;
-        alert("Ти молодець, " + name + "!");
-    }
 
+
+    ns.bag = function(){
+        let a = document.getElementById("floatingInputM").value;
+        if(a!=undefined||a!==null){
+                document.getElementById("result").innerText = a+" We will call you in 5 minutes";
+            
+        }
+        else{
+            document.getElementById("result").innerText = "Enter the phone number";
+        }
+    }
 
     global.$ns = ns;
 

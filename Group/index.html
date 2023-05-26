@@ -30,14 +30,45 @@
                   <ul class="navbar-nav text-center">
                 
   
-                    <input type="text" id="nameInput" placeholder="Введіть ваше ім'я">
-                    <li class="nav-item my-1 my-lg-0">
-                      <a class="nav-link mx-2 active" onclick="$ns.sayHello()"  href="#">Натисни</a>
-                    </li>
+                  
 
                     <li class="nav-item my-1 my-lg-0">
                       <a class="nav-link mx-2 active" id="navHomeButton" aria-current="page" href="index.html">Home</a>
                     </li>
+
+                    <li class="nav-item my-1 my-lg-0">
+                      <a class="nav-link mx-2" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Баг</a>
+                    </li>
+
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+          
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">If you find a bug, specify the number, we will contact you</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+          
+                          <div class="modal-body">
+                            <div class="form-floating mb-3">
+                            <input class="form-control" id="floatingInputM">
+                            <label for="floatingInputM">Phone</label>
+                          </div>
+                           
+                            <div>
+                              <p class="text-start m-2" id="result"></p>
+                            </div>
+                          </div>
+          
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="$ns.bag()">Enter</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
 
                     <li class="nav-item dropdown my-1 my-lg-0">
                       <a class="nav-link dropdown-toggle mx-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
