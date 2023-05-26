@@ -12,7 +12,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+  <style>
+    .modal-body p {
+      color: black;
+    }
+  </style>
 </head>
 <body>
 
@@ -30,44 +34,16 @@
                   <ul class="navbar-nav text-center">
                 
   
-                  
+                    <input type="text" id="nameInput" placeholder="Введіть ваше ім'я">
+                    <li class="nav-item my-1 my-lg-0">
+                      <a class="nav-link mx-2 active" onclick="$ns.sayHello()"  href="#">Натисни</a>
+                    </li>
 
                     <li class="nav-item my-1 my-lg-0">
                       <a class="nav-link mx-2 active" id="navHomeButton" aria-current="page" href="index.html">Home</a>
                     </li>
 
-                    <li class="nav-item my-1 my-lg-0">
-                      <a class="nav-link mx-2" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Баg</a>
-                    </li>
-
-
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-          
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">If you find a bug, specify the number, we will contact you</h5>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-          
-                          <div class="modal-body">
-                            <div class="form-floating mb-3">
-                            <input class="form-control" id="floatingInputM">
-                            <label for="floatingInputM">Phone</label>
-                          </div>
-                           
-                            <div>
-                              <p class="text-start m-2" id="result"></p>
-                            </div>
-                          </div>
-          
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" onclick="$ns.bag()">Enter</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                
 
 
                     <li class="nav-item dropdown my-1 my-lg-0">
@@ -108,6 +84,45 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
               <a href="#" class="text-uppercase mb-0" style="font-size: 26px; cursor: pointer" onclick="$ns.loadAboutUsPage()">About us</a>
+
+
+
+
+
+   
+                <a class="nav-link mx-2" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Баg</a>
+              
+
+
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+    
+                    <div class="modal-header">
+                      <h5 class="text-dark modal-title" id="exampleModalLabel">If you find a bug, specify the number, we will contact you</h5>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+    
+                    <div class="modal-body">
+                      <div class="form-floating mb-3">
+                      <input class="form-control" id="floatingInputM">
+                      <label for="floatingInputM">Phone</label>
+                    </div>
+                     
+                      <div>
+                        <p class="text-dark text-start m-2" id="result"></p>
+                      </div>
+                    </div>
+    
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" onclick="$ns.bag()">Enter</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
             </div>
       
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">

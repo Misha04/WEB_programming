@@ -170,6 +170,10 @@
             },
             false);
     }
+    ns.sayHello=function() {
+        var name = document.getElementById("nameInput").value;
+        alert("Ти молодець, " + name + "!");
+    }
 
 
     ns.bag = function(){
