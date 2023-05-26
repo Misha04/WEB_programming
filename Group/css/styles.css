@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Prompt', sans-serif;
     background-color: #f1f1f1;
   }
   
@@ -90,11 +90,6 @@ body {
   }
   
   /* START HOME PAGE, MAIN CONTENT */
-  
-  .custom-jumbotron {
-    background-size: cover;
-    background: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)), url("../images/jumbotron.jpg") center;
-  }
   
   .card {
     border-radius: 8px;
