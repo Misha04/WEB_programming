@@ -169,6 +169,10 @@
             },
             false);
     }
+    ns.sayHello=function() {
+        var name = document.getElementById("nameInput").value;
+        alert("Ти молодець, " + name + "!");
+    }
 
 
     global.$ns = ns;
